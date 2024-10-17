@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+    <appender class="ch.qos.logback.core.ConsoleAppender" name="RootConsoleAppender">
+        <encoder>
+            <pattern>%d [%-5level] [%X{uuid}] %msg [%X{userId}] [%X{X-Unique-ID}] [%X{Request-ID}] [%thread] [%logger{5}] %n</pattern>
+        </encoder>
+    </appender>
+
+
+    <root>
+        <level value="info"/>
+        <appender-ref ref="RootConsoleAppender"/>
+    </root>
+
+    <logger name="org.springframework" level="info"/>
+    <!--<logger name="org.springframework" level="debug" />-->
+</configuration>
